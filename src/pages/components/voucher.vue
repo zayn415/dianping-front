@@ -81,7 +81,6 @@ function buySeckill() {
     ElMessage.error('秒杀已结束');
     return;
   }
-  // todo 购买逻辑
   request.post('/voucher-order/seckill/' + props.voucher.id)
   .then(response => {
     if (response.data.success !== true) {
